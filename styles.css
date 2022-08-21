@@ -1,0 +1,48 @@
+body {
+    height: 100%;
+    background: black;
+}
+
+button {
+    vertical-align: middle;
+}
+
+button:active {
+    color: gray;
+}
+
+.calc-body {
+    width: 16rem;
+}
+
+.calc-button {
+    width: 3rem;
+    height: 3rem;
+}
+
+.results-div {
+    width: 12.7rem;
+    height: 3rem;
+    background-color: white;
+    font-size: 2rem;
+}
+
+.prime-button {
+    background-color: blueviolet;
+    color: white;
+    border: none;
+}
+
+.prime-button:active {
+    background-color: #6f1abd;
+}
+
+.func-button {
+    background-color: purple;
+    color: white;
+    border: none;
+}
+
+.func-button:active {
+    background-color: #4f004f;
+}
