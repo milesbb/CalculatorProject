@@ -19,21 +19,22 @@ for (const element of FUNC_BUTTONS) {
   if (count === 3) {
     element.addEventListener("click", () => {
       holder = "0";
-      arg1 = 0;
-      arg2 = 0;
       RESULTS_FIELD.innerText = holder;
       holder = "";
     });
   } else if (count === 8) {
     element.addEventListener("click", () => {
+      holder = holder.replace("x", "*");
+      holder = holder.replace("÷", "/");
+      console.log(holder);
       try {
         result = eval(holder);
         RESULTS_FIELD.innerText = result.toString();
-        holder = "";
+        holder = result.toString();
       } catch (error) {
         alert("Error with expression, Please re-enter");
-        holder = "0";
-        RESULTS_FIELD.innerText = holder;
+        holder = "";
+        RESULTS_FIELD.innerText = "0";
       }
     });
   } else {
