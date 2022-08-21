@@ -25,6 +25,7 @@ button:active {
     height: 3rem;
     background-color: white;
     font-size: 2rem;
+    text-align: right;
 }
 
 .prime-button {
