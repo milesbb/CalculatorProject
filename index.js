@@ -26,19 +26,21 @@ for (const element of FUNC_BUTTONS) {
     });
   } else if (count === 8) {
     element.addEventListener("click", () => {
-        try {
-            result = eval(holder);
-        } catch (error) {
-            alert(error.message);
-        }
+      try {
+        result = eval(holder);
         RESULTS_FIELD.innerText = result.toString();
         holder = "";
+      } catch (error) {
+        alert("Error with expression, Please re-enter");
+        holder = "0";
+        RESULTS_FIELD.innerText = holder;
+      }
     });
   } else {
     element.addEventListener("click", () => {
-        holder += element.innerHTML;
-        RESULTS_FIELD.innerText = holder;
-      });
+      holder += element.innerHTML;
+      RESULTS_FIELD.innerText = holder;
+    });
   }
   count++;
 }
